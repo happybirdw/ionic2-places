@@ -1,0 +1,24 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Pages</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="openPage(loginPage)">
+        Login
+      </button>
+      <button ion-item (click)="openPage(signupPage)">
+        Signup
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="places" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="add" tabIcon="text"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="around" tabIcon="stats"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="friends" tabIcon="image"></ion-tab>
+</ion-tabs>

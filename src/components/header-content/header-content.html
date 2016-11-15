@@ -1,0 +1,25 @@
+<!--
+  Generated template for the HeaderContent component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+
+<ion-menu [content]="content" side="right">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{title}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="openPage(loginPage)">
+        Login
+      </button>
+      <button ion-item (click)="openPage(signupPage)">
+        Signup
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
