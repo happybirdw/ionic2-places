@@ -5,7 +5,8 @@ import { AddPage } from '../add/add';
 import { AroundPage } from '../around/around';
 import { FriendsPage } from '../friends/friends';
 import { Routes } from '../../app/app.routes';
-import {Auth} from '../../providers/auth';
+import { Auth } from '../../providers/auth';
+import { Settings } from '../../providers/settings';
 
 /*
   Generated class for the Tabs tabs.
@@ -26,13 +27,16 @@ export class TabsPage {
 
   email:string;
 
-  constructor(public navCtrl: NavController, private auth:Auth) {
+  constructor(public navCtrl: NavController, private auth:Auth, private settings:Settings) {
      this.email = (auth.user) ? auth.user.email : null
   }
 
   logout(){
     this.auth.logout();
     this.navCtrl.setRoot(Routes.getRootPage(false));
+  }
+  getSettings() {
+    this.navCtrl.push(Routes.getPage(Routes.SETTINGS))
   }
 
 }
